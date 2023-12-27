@@ -9,6 +9,41 @@
   <link rel="icon" href="../image/Book.png" type="image/x-icon">
   <title>學生管理系統</title>
   <link rel="stylesheet" href="../css/homePage.css">
+  <style>
+    #tyModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .tyModalContent {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .tyClose {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .tyClose:hover,
+        .tyClose:focus {
+            color: #000;
+            cursor: pointer;
+        }
+  </style>
 </head>
 
 <body>
@@ -53,7 +88,26 @@
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
   </div>
+  <div id="tyModal">
+    <div class="tyModalContent">
+        <span class="tyClose">&times;</span>
+        <h1>好康報報</h1>
+        <p>優惠資訊</p>
+    </div>
+</div>
   <Script src="../javaScript/homePage.js"></Script>
+  <script>
+    var modalElem = document.getElementById("tyModal");
+        var spanElem = document.getElementsByClassName("tyClose")[0];
+
+        spanElem.onclick = function () {
+            modalElem.style.display = "none";
+        }
+
+        setTimeout(function () {
+            modalElem.style.display = "block";
+        }, 1000);
+  </script>
 </body>
 
 </html>
