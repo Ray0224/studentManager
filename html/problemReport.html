@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/commonCss.css">
+  <script src="../javaScript/commonForm.js" defer></script>
+  <link rel="icon" href="../image/Book.png" type="image/x-icon">
+  <title>問題回報</title>
+  <link rel="stylesheet" href="../css/problemReport.css">
+  <script src="../javaScript/problemReport.js"></script>
+</head>
+
+<body>
+
+  <div id="commonFormContainer"></div>
+
+  <div class="main-content">
+    <div>
+      <div id="contentTitle">學生管理系統問題回報</div>
+    <form action="">
+      <fieldset>
+        <legend>基本資料</legend>
+        <label for="userName" class="question">姓名<span class="requiredStar">*</span>:</label>
+        
+        <Input type="text" id="userName" required="required"></Input>
+        <br>
+        <label for="phone" class="question">電話<span class="requiredStar">*</span>:</label>
+        <input type="tel" id="phone" pattern="09[0-9]{2}-[0-9]{3}-[0-9]{3}" required="required" placeholder="09**-***-***">
+        <br>
+        <label for="mail"  class="question">信箱<span class="requiredStar">*</span>:</label>
+        <input type="email" id="mail" required="required" placeholder="*****@******">
+      </fieldset>
+      
+      <label for="" class="question">發現問題功能:</label>
+      <input class="option" type="checkbox" id="create" name="tool">
+      <label class="option" for="create">新增班級</label>
+      <input class="option" type="checkbox" id="select" name="tool">
+      <label class="option" for="select">選擇班級</label>
+      <input class="option" type="checkbox" id="delete" name="tool">
+      <label class="option" for="delete">刪除班級</label>
+      <input class="option" type="checkbox" id="random" name="tool">
+      <label class="option" for="random">隨機抽取</label>
+      <br>
+      <label for="" class="question">發現問題頁面:</label>
+      <input class="option" type="checkbox" id="homePage" name="page">
+      <label class="option" for="homePage">首頁</label>
+      <input class="option" type="checkbox" id="studentMessage" name="page">
+      <label class="option" for="studentMessage">學生資訊</label>
+      <input class="option" type="checkbox" id="scoreManage" name="page">
+      <label class="option" for="scoreManage">成績管理</label>
+      <input class="option" type="checkbox" id="scorestatistics" name="page">
+      <label class="option" for="scorestatistics">成績統計</label>
+      <input class="option" type="checkbox" id="classMemo" name="page">
+      <label class="option" for="classMemo">課程筆記</label>
+      <br>
+      <label for="problemDetail" class="question">問題描述<span class="requiredStar">*</span>:</label>
+      <br>
+      <textarea name="" id="problemDetail" cols="80" rows="10" required="required"></textarea>
+      <br>
+      <div id="submitButtonDiv">
+        <input type="submit" id="submitButton">
+      </div>
+    </form>
+    </div>
+  </div>
+</body>
+
+
+</html>

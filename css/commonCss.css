@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    background-color: #4267B2;
+    position: fixed;
+    padding: 5px;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.header span {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #3498db;
+    transition: background-color 0.3s ease;
+    vertical-align: bottom;
+    margin: 0px 10px 0px 10px;
+}
+
+.header>h1 {
+    margin: 0px;
+    margin-left: 20px;
+    color: white;
+}
+
+.header span:hover {
+    background-color: #2980b9;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.header span:active{
+    background-color: #1f5d86;
+}
+
+#headRandom {
+    position: absolute;
+    float: right;
+    right: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    width: 130px;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.headBoard {
+    display: none;
+    position: fixed;
+    background-color: azure;
+    border: 3px solid #4267B2;
+    border-radius: 5px;
+    z-index: 1100;
+    top: 50px;
+    width: fit-content;
+    text-align: center;
+    padding: 5px;
+}
+
+#createBoard {
+    left: 120px;
+}
+
+#createBoard input{
+    font-size: 18px;
+}
+#classBoard {
+    left: 230px;
+}
+
+#deleteBoard{
+    left:350px;
+}
+#randomBoard {
+    float: right;
+    right: 20px;
+    width: 350px;
+}
+
+#randomBoard>span {
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#randomBoard input,#randomBoard label{
+    font-size: 18px;
+}
+#randomStudentTitle {
+    background-color: rgb(107, 189, 107);
+    color: white;
+    font-weight: bold;
+}
+
+#randomNumberTitle {
+    background-color: azure;
+    color: rgb(169, 170, 170);
+    font-weight: normal;
+}
+
+#randomNumber {
+    display: none;
+}
+
+.randomButton,#createBoard>button {
+    background-color: #b48939;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.randomButton:hover,#createBoard>button:hover {
+    background-color: #8d6b2c;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.answerArea {
+    font-size: 30px;
+    word-wrap: break-word;
+    white-space: pre-line;
+    text-align: left; 
+}
+.classButton,.deleteButton{
+    font-size: 30px;
+}
+
+.classButton:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(131, 128, 128);
+}
+
+.deleteButton:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(131, 128, 128);
+}
+.main-content {
+    flex: 1;
+    padding-top: 80px;
+    padding-left: 170px;
+    margin: 0px;
+}

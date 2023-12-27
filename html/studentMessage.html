@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/commonCss.css">
+  <script src="../javaScript/commonForm.js" defer></script>
+  <link rel="icon" href="../image/Book.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/studentMessage.css">
+  <script src="../javaScript/studentMessage.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+  <title>學生資訊</title>
+</head>
+
+<body>
+
+  <div id="commonFormContainer"></div>
+
+  <div class="main-content">
+    <div>
+      <div class="cTable">
+        <table id="studentTable">
+          <tr>
+            <th>編號</th>
+            <th>姓名</th>
+          </tr>
+        </table>
+      </div>
+      <div class="cEdit">
+        <div onclick="onclickEdit()"><img src="../image/pancel.png" alt=""></div>
+      </div>
+      <div class="cFunction">
+        <div>
+          <button onclick="onclickReadBoard()">匯入檔案</button>
+          <br>
+          <div id="readBoard">
+            <input type="file" id="excelFile" accept=".xls, .xlsx">
+            <br>
+            <button onclick="readExcel()">讀取檔案</button>
+          </div>
+          <button onclick="onclickStudentCount()" id="studentCountButton">班級人數</button>
+          <br>
+          <div id="studentCount">
+            <input type="text" size="6" placeholder="請輸入人數" id="studentCountInput"
+              oninput="value=value.replace(/[^\d]/g,'')">
+            <button onclick="onclickCountConfirm()">確認</button>
+          </div>
+          <button onclick="addRow()">加一人</button><br>
+          <div>
+            <button onclick="onclickSave()">保存</button><br>
+            <button onclick="onclickDiscard()">不保存</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script>
+
+  </script>
+</body>
+
+</html>

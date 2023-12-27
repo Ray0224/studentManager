@@ -1,0 +1,62 @@
+.main-content{
+    display: flex;
+    justify-content: center;
+}
+.main-content>div{
+    border: solid rgb(255, 166, 0) 10px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+
+}
+#contentTitle{
+    color: orange;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+}
+form{
+    font-size: 20px;
+}
+
+fieldset{
+    width: fit-content;
+    border: rgb(245, 170, 32) solid 2px;
+}
+legend{
+    color: rgb(245, 170, 32);
+}
+#userName,#phone,#mail,textarea{
+    background-color: rgb(253, 193, 82);
+    border: none;
+    font-size: 20px;
+}
+.question{
+    color: gray;
+    font-weight: bold;
+}
+
+.option{
+    cursor: pointer;
+    color: orangered;
+    font-weight: 500;
+}
+.requiredStar{
+    color: red;
+}
+#submitButtonDiv{
+    display: flex;
+    justify-content: center;
+}
+#submitButton{
+    border: 3px solid orange;
+    border-radius: 20px;
+    font-size: 50px;
+    margin-top: 10px;
+    color: orange;
+}
+#submitButton:hover{
+    cursor: pointer;
+    background-color: orange;
+    color: rgb(255, 255, 255);
+}

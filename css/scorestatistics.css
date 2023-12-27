@@ -1,0 +1,71 @@
+#classStatisticsTitle{
+    background-color: rgb(231, 27, 27);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#studentStatisticsTitle{
+    color: gray;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#studentStatistics{
+    display: none;
+}
+#scoreArea ,#scoreArea2{
+    padding: 10px;
+}
+
+#scoreArea>button,#scoreArea2>button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #e68506;
+}
+
+#scoreArea>button:hover,#scoreArea2>button:hover {
+    background-color: #965807;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#scoreArea>button:active,#scoreArea2>button:active {
+    background-color: #694005;
+}
+#downloadButton,#downloadButton2{
+    display: none;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #28d199;
+}
+#downloadButton:hover,#downloadButton2:hover{
+    background-color: #219b72;
+    cursor: pointer;
+}
+#downloadButton:active,#downloadButton:active{
+    background-color: #18684d;
+}
+#result{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+}

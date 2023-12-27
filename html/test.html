@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>读取 Excel</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+</head>
+<body>
+    <input type="file" id="excelFile" accept=".xls, .xlsx">
+    <button onclick="readExcel()">读取 Excel</button>
+
+    
+    <script>
+        function readExcel() {
+            const input = document.getElementById('excelFile');
+            const file = input.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                //讀取成功時觸發function
+                reader.onload = function (e) {
+                    const data = new Uint8Array(e.target.result);
+                    const workbook = XLSX.read(data, { type: 'array' });
+                    
+                    // 取得第一個工作表名稱
+                    const sheetName = workbook.SheetNames[0];
+                    const sheet = workbook.Sheets[sheetName];
+                    //取得A1資料個的STRING
+                    const A1String = sheet.A1.h;
+                    //產生一個陣列,A2,A3,A4; A1的值為物件的屬性名稱
+                    const columnA = XLSX.utils.sheet_to_json(sheet);
+                    for(let i = 0;i<columnA.length;i++){
+                        console.log(columnA[i][A1String]);
+                    }
+                };
+                reader.readAsArrayBuffer(file)
+            } 
+            else {
+                console.error('请选择一个文件');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+
+.main-content>div {
+    display: flex;
+}
+.main-content>div>div{
+    margin-right: 20px;
+}
+#studentCount{
+    display: none;
+}
+.cEdit>div{
+    margin-top: 20px;
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(233, 177, 58);
+}
+.cEdit>div:hover{
+    background-color: rgb(197, 150, 49);
+    cursor: pointer;
+}
+.cFunction{
+    display: none;
+}
+.cFunction>div{
+    background-color: rgb(220, 234, 238);
+    border: solid 2px rgb(233, 177, 58);
+    padding: 10px;
+}
+.cFunction>div>button{
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px ;
+    margin: 5px;
+    text-align: center; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+}
+.cFunction>div>button:hover{
+    background-color: #45a049; 
+    cursor: pointer; 
+}
+.cFunction>div>div>button{
+    background-color: #eb5b48; 
+    color: white; 
+    padding: 10px ;
+    margin: 5px;
+    text-align: center; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+}
+.cFunction>div>div>button:hover{
+    background-color: #ca4d3d; 
+    cursor: pointer; 
+}
+
+#studentCount,#readBoard{
+    display: none;
+    background-color: #c4dbca;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    border: #4CAF50 solid 2px;
+    padding: 5px;
+    width: 250px;
+}
+#studentCount>input,#readBoard>input{
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: medium;
+}
+#studentCount>button,#readBoard>button{
+    background-color: rgb(231, 108, 20);
+    border: none; 
+    border-radius: 5px;
+    font-size: medium;
+    margin-right: 10px;
+}
+#studentCount>button:hover,#readBoard>button:hover{
+    background-color: rgb(207, 96, 17);
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    border: 1px solid #3498db; /* 藍色邊框 */
+    padding: 10px;
+    text-align: left;
+    position: relative; /* 使 input 相對定位 */
+  }
+
+  th {
+    background-color: #3498db; /* 藍色背景 */
+    color: #fff; /* 白色文字 */
+  }
+
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* 淺灰色底色，用於奇數行 */
+  }

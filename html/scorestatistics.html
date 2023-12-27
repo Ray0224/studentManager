@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/commonCss.css">
+    <script src="../javaScript/commonForm.js" defer></script>
+    <link rel="icon" href="../image/Book.png" type="image/x-icon">
+    <title>成績統計</title>
+    <link rel="stylesheet" href="../css/scorestatistics.css">
+    <script src="../javaScript/scorestatistics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div id="commonFormContainer"></div>
+
+    <div class="main-content">
+        <span id="classStatisticsTitle" onclick="onclickSwitchBoard(0)">班級成績統計</span>
+        <span id="studentStatisticsTitle" onclick="onclickSwitchBoard(1)">個人成績統計</span>
+        <div id="classStatistics">
+            <div id="scoreArea"></div>
+            <button onclick="downloadChart()" id="downloadButton">下載圖表</button>
+            <p id="result" ></p>
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <div id="studentStatistics">
+            <div id="scoreArea2"></div>
+            <button onclick="downloadChart2()" id="downloadButton2">下載圖表</button>
+            <div><canvas id="myChart2"></canvas></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

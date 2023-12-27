@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/commonCss.css">
+  <script src="../javaScript/commonForm.js" defer></script>
+  <link rel="icon" href="../image/Book.png" type="image/x-icon">
+  <title>成績管理</title>
+  <link rel="stylesheet" href="../css/scoreManage.css">
+  <script src="../javaScript/scoreManage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+  <div id="commonFormContainer"></div>
+
+
+  <div class="main-content">
+    <div>
+      <div class="sTable">
+        <table id="scoreTable">
+          <tr>
+            <th>編號</th>
+            <th>姓名</th>
+          </tr>
+        </table>
+        <div id="updateBoard">
+          <button onclick="onclickUpdate()">更新並保存</button>
+          <button onclick="onclickDiscard()">不保存</button>
+        </div>
+      </div>
+      <div class="sEdit">
+        <div onclick="onclickEdit()"><img src="../image/pancel.png" alt=""></div>
+      </div>
+      <div class="sFunction">
+        <div> 
+          <button onclick="onclickReadBoard()">匯入檔案</button>
+          <br>
+          <div id="readBoard">
+            <input type="file" id="excelFile" accept=".xls, .xlsx">
+            <br>
+            <button onclick="readExcel()">讀取檔案</button>
+          </div>
+          <button onclick="onclickAddScore()">新增測驗</button><br>
+          <div>
+            <button onclick="onclickSave()">保存</button><br>
+            <button onclick="onclickDiscard()">不保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+    
+
+  
+
+</body>
+
+</html>

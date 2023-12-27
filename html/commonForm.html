@@ -1,0 +1,45 @@
+<!-- commonForm.html -->
+
+<div class="header">
+  <a href="homePage.html"><img src="../image/Book.png"></a>
+  <span onclick="onclickHeadBoard(0)">新增班級</span>
+  <span onclick="onclickHeadBoard(1)">選擇班級</span>
+  <span onclick="onclickHeadBoard(2)">刪除班級</span>
+  <h1 id="currentClass">目前班級</h1>
+  <span onclick="onclickHeadBoard(3)" id="headRandom">隨機抽取</span>
+</div>
+<div class="headBoard" id="createBoard">
+  <input type="text" id="classInput" oninput="value=value.replace(/[^\w\u4E00-\u9FA5]/g, '')" >
+  <br><br>
+  <button onclick="onclickCreateClass()">確定</button>
+</div>
+<div class="headBoard" id="classBoard"></div>
+<div class="headBoard" id="deleteBoard"></div>
+<div class="headBoard" id="randomBoard">
+  <span id="randomStudentTitle" onclick="onclickRandomBoard(0)">隨機學生</span>
+  <span id="randomNumberTitle" onclick="onclickRandomBoard(1)">隨機數字</span>
+  <br><br>
+  <div id="randomStudent">
+    <input type="text" placeholder="ex:1" size="1" id="person" value="1" oninput="value=value.replace(/[^\d]/g,'')"><label for="person">人</label>
+    <label for="group">,分成</label><input type="text" placeholder="ex:1" size="1" id="group" value="1" oninput="value=value.replace(/[^\d]/g,'')"><label for="group">組</label><br><br>
+    <button class="randomButton" onclick="onclickRandomStudent()">隨機產生</button><br><br>
+    <div class="answerArea" id="pResult"></div>
+  </div>
+  <div id="randomNumber">
+    <label for="rNumber1">從</label><input type="text" placeholder="ex:0" size="1" value="0" id="rNumber1" oninput="value=value.replace(/[^\d]/g,'')">
+    <label for="rNumber2">到</label><input type="text" placeholder="ex:100" size="3" value="100" id="rNumber2" oninput="value=value.replace(/[^\d]/g,'')">
+    <label for="rNumber3">產生</label><input type="text" placeholder="ex:1" size="1" value="1" id="rNumber3" oninput="value=value.replace(/[^\d]/g,'')">
+    <label>個數字</label><br><br>
+    <button class="randomButton" onclick="onclickRandomNumber()">隨機產生</button><br><br>
+    <div class="answerArea" id="nResult"></div>
+  </div>
+</div>
+<div class="sidebar">
+  <ul>
+    <li><a href="studentMessage.html"><img src="../image/student.png"> 學生資訊</a></li>
+    <li><a href="scoreManage.html"><img src="../image/score.png">  成績管理</a></li>
+    <li><a href="scorestatistics.html"><img src="../image/statistic.png">  成績統計</a></li>
+    <li><a href="classMemo.html"><img src="../image/blackBoard.png">  課程筆記</a></li>
+    <li><a href="problemReport.html"><img src="../image/problemReport.png">  問題回報</a></li>
+  </ul>
+</div>
